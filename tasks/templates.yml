@@ -1,0 +1,22 @@
+---
+- name: "Create the configuration directory"
+  file:
+    path: "/etc/node_exporter"
+    mode: "u=rx,g=,o="
+    state: "directory"
+
+- name: "Create the connection configuration"
+  template:
+    src: "etc/node_exporter/.my.cnf.j2"
+    dest: "/etc/node_exporter/.my.cnf"
+    owner: "root"
+    mode: "u=r,g=,o="
+  notify: "restart mysqld_exporter"
+
+- name: "Create the systemd service"
+  template:
+    src: "etc/systemd/system/mysqld_exporter.service.j2"
+    dest: "/etc/systemd/system/mysqld_exporter.service"
+    owner: "root"
+    mode: "u=rwx,g=r,o=r"
+  notify: "restart mysqld_exporter"

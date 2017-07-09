@@ -1,0 +1,12 @@
+[client]
+{% if mysqld_exporter_connect_host is not none %}
+host={{ mysqld_exporter_connect_host }}
+{% endif %}
+{% if mysqld_exporter_connect_port is not none %}
+port={{ mysqld_exporter_connect_port }}
+{% endif %}
+{% if mysqld_exporter_connect_socket is not none %}
+socket={{ mysqld_exporter_connect_socket }}
+{% endif %}
+user={{ mysqld_exporter_connect_user }}
+password={{ mysqld_exporter_connect_password }}

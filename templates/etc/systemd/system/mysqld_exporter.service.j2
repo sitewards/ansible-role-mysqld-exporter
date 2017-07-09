@@ -1,0 +1,16 @@
+[Unit]
+
+Description=The prometheus mysqld-exporter
+Documentation=https://github.com/sitewards/ansible-role-mysqld-exporter
+
+[Service]
+
+# Start the service, bound to localhost. It will be exposed by another service, such as NGINX or stunnel.
+ExecStart=/usr/local/bin/mysqld_exporter \
+    -config.my-cnf="/etc/node_exporter/.my.cnf" \
+    -web.listen-address="127.0.0.1:9104"
+
+[Install]
+
+# Boot it after the network is up and running
+WantedBy=network-online.target
