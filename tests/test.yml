@@ -1,0 +1,8 @@
+---
+- hosts: all
+
+  vars:
+    mysqld_exporter_connect_user: "root"
+    mysqld_exporter_connect_password: "password"
+  roles:
+    - role_under_test
