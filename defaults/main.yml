@@ -1,7 +1,7 @@
 ---
 ## The version of the node exporter to download and install. A full list of versions can be found at the following URL:
 ## https://github.com/prometheus/mysqld_exporter/releases
-mysqld_exporter_version: "0.10.0"
+mysqld_exporter_version: "0.11.0"
 
 ## The architecture that the node exporter supports. The exporter is built for a series of architectures; see the above
 ## releases link for further details
@@ -13,10 +13,10 @@ mysqld_exporter_checksum_algorithm: "sha512"
 
 ## There are two checksums that matter: The archive, and the binary. The binary is the executable node exporter,
 ## the archive the thing it's downloaded with.
-mysqld_exporter_checksum_binary: "1fd1506dd27879a79c5c9de0bc282f46e28fc17785d10a7693a708705a878d56992e15675d4b13231582d6692f05e3ad9bc7afe4a4f81b450563b92aecfa66e9"
+mysqld_exporter_checksum_binary: "e30165c746ea82682749de86c09cdb41c10096790b49e8b69ecfd4522a15d4cc5a8db84c1471b98c6deb944fe26c7252ddf3e9551920740765dfd036d71a0996"
 
 ## See above
-mysqld_exporter_checksum_archive: "ae67fb0a63f15492a3ea05881196a222f291ec241f34097abb9c619ac2e63cb1070a16796949994141921a4bd0aca5eec304a2549d565ee96a67813af630ed4f"
+mysqld_exporter_checksum_archive: "6702fa48172a0d80509b56ce974d117e72d2a5b6f21f2e3f092e94867de4b1ea158b11e4c593db4abbacd79ba3be7a0ffbcf40599c3c360f3d6cd88a44930253"
 
 ## The host at which MySQL is available. One of host + port or socket required
 mysqld_exporter_connect_host: ""

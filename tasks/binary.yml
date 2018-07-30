@@ -39,6 +39,6 @@
     state: "absent"
   with_items:
     - "/tmp/mysqld_exporter-{{ mysqld_exporter_version }}.linux-{{ mysqld_exporter_arch }}.tar.gz"
-    - "/tmp/mysqld_exporter-0.14.0.linux-{{ mysqld_exporter_arch }}/"
+    - "/tmp/mysqld_exporter-{{ mysqld_exporter_version }}.linux-{{ mysqld_exporter_arch }}/"
   when: bin.stat.exists == False or
         bin.stat.checksum != mysqld_exporter_checksum_binary
