@@ -7,8 +7,8 @@ Documentation=https://github.com/sitewards/ansible-role-mysqld-exporter
 
 # Start the service, bound to localhost. It will be exposed by another service, such as NGINX or stunnel.
 ExecStart=/usr/local/bin/mysqld_exporter \
-    -config.my-cnf="/etc/node_exporter/.my.cnf" \
-    -web.listen-address="127.0.0.1:9104"
+    --config.my-cnf="/etc/node_exporter/.my.cnf" \
+    --web.listen-address="127.0.0.1:9104"
 
 [Install]
 
