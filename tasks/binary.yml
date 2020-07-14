@@ -1,5 +1,5 @@
 ---
-- name: "Check whether the node exporter has already been installed"
+- name: "Check whether the mysqld exporter has already been installed"
   stat:
     path: "/usr/local/bin/mysqld_exporter"
     checksum_algorithm: "{{ mysqld_exporter_checksum_algorithm }}"
