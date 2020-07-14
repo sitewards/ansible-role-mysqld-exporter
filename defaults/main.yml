@@ -1,9 +1,9 @@
 ---
-## The version of the node exporter to download and install. A full list of versions can be found at the following URL:
+## The version of the mysqld exporter to download and install. A full list of versions can be found at the following URL:
 ## https://github.com/prometheus/mysqld_exporter/releases
 mysqld_exporter_version: "0.11.0"
 
-## The architecture that the node exporter supports. The exporter is built for a series of architectures; see the above
+## The architecture that the mysqld exporter supports. The exporter is built for a series of architectures; see the above
 ## releases link for further details
 mysqld_exporter_arch: "amd64"
 
@@ -11,7 +11,7 @@ mysqld_exporter_arch: "amd64"
 ## http://docs.ansible.com/ansible/stat_module.html
 mysqld_exporter_checksum_algorithm: "sha512"
 
-## There are two checksums that matter: The archive, and the binary. The binary is the executable node exporter,
+## There are two checksums that matter: The archive, and the binary. The binary is the executable mysqld exporter,
 ## the archive the thing it's downloaded with.
 mysqld_exporter_checksum_binary: "e30165c746ea82682749de86c09cdb41c10096790b49e8b69ecfd4522a15d4cc5a8db84c1471b98c6deb944fe26c7252ddf3e9551920740765dfd036d71a0996"
 
